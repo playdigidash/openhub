@@ -1,0 +1,31 @@
+
+.App{
+  text-align: center;
+  background-color: rgba(245, 222, 220, 0);
+}
+
+
+.App .content{
+  font-size: large;
+  text-align: left;
+  color: hsl(0, 98%, 50%);
+}
+
+textarea{
+  width: 100%;
+  min-height: 140px;
+  resize: vertical;
+  border-radius: 10px;
+  box-shadow: 40px;
+  margin: auto;
+  display: flex;
+  float: left;
+  border-width: 3px;
+  
+}
+
+input{
+
+  background-color: rgb(161, 166, 171);
+}
+      
