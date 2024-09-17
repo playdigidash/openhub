@@ -11,7 +11,7 @@
   color: hsl(0, 98%, 50%);
 }
 
-textarea{
+/* textarea{
   width: 100%;
   min-height: 140px;
   resize: vertical;
@@ -22,7 +22,7 @@ textarea{
   float: left;
   border-width: 3px;
   
-}
+} */
 
 input{
 

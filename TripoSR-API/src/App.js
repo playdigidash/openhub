@@ -5,9 +5,12 @@ import './App.css';
 // import TextInput from './Components/TextInput';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
-import Textbox from './Components/Textbox';
-import Button from './Components/Button';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import InputUploader from './Components/InputUploader';
+import ImageUploader from './Components/ImageUploader';
+// import Textbox from './Components/Textbox';
+// import ImageUploader from './Components/ImageUploader';
+// import Button from './Components/Button';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import BackDrop from './Components/Backdrop';
 
 
@@ -20,8 +23,15 @@ function App() {
       {/* <BackDrop /> */}
       <Header />
       <br></br>
-      <Textbox />
-      <Button />
+      {/* <InputUploader /> */}
+      <ImageUploader />
+      {/* <ul>
+        <ul><Textbox /></ul>
+        <ul><ImageUploader /></ul>
+      </ul> */}
+      {/* <ImageUploader/>
+      <Textbox /> */}
+      {/* <Button /> */}
       <Footer />
     </div>
   );
