@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meshy.ai Text to 3D Generator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 50px;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #218838;
+      }
+      .result {
+        margin-top: 20px;
+      }
+      #refineBtn {
+        display: none;
+        margin-top: 20px;
+        background-color: #007bff;
+      }
+      #downloadLinks {
+        display: none;
+        margin-top: 20px;
+      }
+      img {
+        max-width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Generate 3D Model from Text</h1>
+    <div>
+      <input
+        type="text"
+        id="prompt"
+        placeholder="Enter description for 3D model..."
+      />
+      <button id="generateBtn">Generate 3D Model</button>
+      <button id="refineBtn">Refine 3D Model</button>
+      <!-- Refine button -->
+    </div>
+
+    <div class="result" id="result"></div>
+
+    <!-- Container for download links -->
+    <div id="downloadLinks"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
