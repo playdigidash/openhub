@@ -1,0 +1,31 @@
+.combined-app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .app-title {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .app-content {
+    display: flex;
+    flex: 1;
+  }
+  
+  .left-side {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+  }
+  
+  .right-side {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+  }
