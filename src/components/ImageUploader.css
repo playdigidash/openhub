@@ -1,0 +1,151 @@
+/* ImageUploader.css */
+
+.image-uploader-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .image-uploader-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .image-uploader-label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .image-url-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .image-url-input:focus {
+    border-color: #4c9cdb;
+  }
+  
+  .submit-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #4c9cdb;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #3b7bb5;
+  }
+  
+  .submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    color: #ff4d4d;
+    font-size: 0.9rem;
+  }
+
+  /* Diagonal Stripes Background */
+.image-uploader-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(76, 156, 219, 0.1),
+      rgba(76, 156, 219, 0.1) 10px,
+      rgba(91, 117, 200, 0.1) 10px,
+      rgba(91, 117, 200, 0.1) 20px
+    );
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    animation: stripeAnimation 8s linear infinite;
+  }
+  
+  @keyframes stripeAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: 100px 100px; }
+  }
+  
+
+    /* Particle Background */
+/* .image-uploader-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+  } */
+  
+  /* .image-uploader-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(#4c9cdb 1px, transparent 1px), radial-gradient(#5b75c8 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.15;
+    animation: float 15s linear infinite;
+    transform: translateX(-50%);
+  }
+  
+  @keyframes float {
+    0% { transform: translateX(-50%) translateY(0); }
+    100% { transform: translateX(-50%) translateY(-20px); }
+  }
+   */
+  /* Background gradient animation
+.image-uploader-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(120deg, #4c9cdb, #5b75c8, #a1c4fd);
+    background-size: 200% 200%;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    animation: gradientAnimation 10s ease infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+   */

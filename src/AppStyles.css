@@ -1,0 +1,56 @@
+/* AppStyles.css */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .button:hover {
+    background-color: #2980b9;
+  }
+  
+  .card {
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .progress-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .thumbnail {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
