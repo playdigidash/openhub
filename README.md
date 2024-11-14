@@ -39,7 +39,7 @@ Here’s a sample README file for your Meshy App project. This README is structu
 ### Steps
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/meshy-app.git
+   git clone (https://github.com/playdigidash/openhub.git)
    cd meshy-app
    ```
 
