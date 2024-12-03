@@ -113,8 +113,6 @@ This project is licensed under the MIT License.
 
 ### Additional Notes
 
-If you’re submitting this as an internship project, you might want to add a note at the end of your README mentioning your contributions, like:
-
 > **Contributions**: This project was developed during an internship with Lid Vizion. My contributions included implementing the `ModelViewer` and `MeshyApp` components, integrating the API for model generation, designing the UI, and adding animations for a modern user experience.
 
-This README provides a thorough overview of your project, making it accessible and easy to understand for other developers or potential users. Let me know if you’d like further customization!
+This README provides a thorough overview of your project, making it accessible and easy to understand for other developers or potential users.
