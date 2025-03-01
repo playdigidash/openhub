@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: hsla(188, 100%, 97%, 0.245);
+}
+
+.file-input {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: hsla(188, 81%, 82%, 0.436);
+}
+.Model {
+  margin-bottom: 20px;
+  background-color: hsla(188, 81%, 82%, 0.436);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+
