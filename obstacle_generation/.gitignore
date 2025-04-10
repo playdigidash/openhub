@@ -1,0 +1,6 @@
+mycreds.txt
+client_secrets.json
+credentials.json.json
+__pycache__/
+*.glb
+*.pyc
