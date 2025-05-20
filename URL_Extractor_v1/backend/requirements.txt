@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pymongo
+python-dotenv
+requests
+pillow
+beautifulsoup4
+playwright

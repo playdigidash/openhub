@@ -1,9 +1,14 @@
-FROM mcr.microsoft.com/playwright/python:v1.51.0-jammy
+FROM python:3.10
 
 WORKDIR /app
 
-COPY . .
+COPY . /app
 
-RUN pip install --no-cache-dir fastapi uvicorn pymongo pillow beautifulsoup4 requests playwright
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+
+# Install Playwright and required browser binaries
+RUN apt-get update && apt-get install -y wget gnupg
+RUN playwright install --with-deps
 
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

@@ -12,9 +12,16 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import re
 import requests
+import os
+from dotenv import load_dotenv
 
-client = MongoClient("mongodb+srv://sai-jyotheesh:QhQ6wvcqUx0WkOg6@cluster0.llb6usf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-db = client['url_assets_db']
+load_dotenv()
+
+MONGO_URI = os.getenv("MONGO_URI")
+MONGO_DB = os.getenv("MONGO_DB", "url_assets_db")
+
+client = MongoClient(MONGO_URI)
+db = client[MONGO_DB]
 fs = gridfs.GridFS(db)
 
 app = FastAPI()
