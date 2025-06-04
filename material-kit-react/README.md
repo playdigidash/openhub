@@ -214,3 +214,16 @@ Dribbble: <https://dribbble.com/creativetim>
 Google+: <https://plus.google.com/+CreativetimPage>
 
 Instagram: <https://instagram.com/creativetimofficial>
+
+## Local Setup
+
+1. Navigate to `material-kit-react` and install dependencies:
+   ```bash
+   npm install
+   ```
+2. Copy `.env.sample` to `.env` and fill in your API keys.
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
