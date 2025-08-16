@@ -204,7 +204,7 @@ function TriviaPage() {
               <CloudUploadIcon sx={{ marginRight: "10px" }} />
               <input
                 type="file"
-                accept="application/pdf"
+                accept="application/pdf,application/vnd.openxmlformats-officedocument.presentationml.presentation"
                 onChange={handleFileChange}
                 style={{ border: "none", outline: "none", flexGrow: 1 }}
               />

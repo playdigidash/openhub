@@ -9,15 +9,21 @@ import json
 from sentence_transformers import SentenceTransformer, util
 import torch
 from datetime import datetime
+import os
+from dotenv import load_dotenv
+from pptx import Presentation
 
-# Set OpenAI API key (hardcoded)
-openai.api_key = "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"
+load_dotenv()
+
+
+# Set OpenAI API key from environment variable
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Initialize Flask app
 app = Flask(__name__)
 
 # Allow CORS from frontend
-CORS(app, resources={r"/*": {"origins": "http://localhost:3001"}})
+CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
 # Load models
 print("Loading tokenizer and T5 model...")
@@ -118,6 +124,15 @@ def generate_questions(context, num_questions=5, similarity_threshold=0.8):
 
     return final_questions
 
+def extract_text_from_pptx(pptx_path):
+    prs = Presentation(pptx_path)
+    text_chunks = []
+    for slide in prs.slides:
+        for shape in slide.shapes:
+            if hasattr(shape, "text") and shape.text.strip():
+                text_chunks.append(shape.text.strip())
+    return "\n".join(text_chunks)
+
 @app.route("/", methods=["GET"])
 def home():
     """Root route to confirm server is running."""
@@ -132,23 +147,30 @@ def process_pdf():
     file = request.files['file']
 
     try:
-        # Extract text from PDF
-        with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_file:
-            tmp_file.write(file.read())
-            images = convert_from_path(tmp_file.name)
-            context = "".join(pytesseract.image_to_string(img) for img in images)
+        file_ext = os.path.splitext(file.filename)[1].lower()
+
+        if file_ext == ".pdf":
+            with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_file:
+                tmp_file.write(file.read())
+                images = convert_from_path(tmp_file.name)
+                context = "".join(pytesseract.image_to_string(img) for img in images)
+
+        elif file_ext == ".pptx":
+            with tempfile.NamedTemporaryFile(delete=False, suffix=".pptx") as tmp_file:
+                tmp_file.write(file.read())
+                context = extract_text_from_pptx(tmp_file.name)
+
+        else:
+            return jsonify({"error": "Unsupported file format. Please upload a PDF or PPTX."}), 400
 
         if not context.strip():
-            return jsonify({"error": "No text extracted from the PDF."}), 400
+            return jsonify({"error": "No text extracted from the uploaded file."}), 400
 
-        # Return text extraction result to frontend
         extracted_response = {
             "status": "text_extracted",
-            "message": "Text extracted from PDF successfully!",
+            "message": "Text extracted successfully!",
             "context": context
         }
-
-        # Send the extracted context back to the frontend
         return jsonify(extracted_response)
 
     except Exception as e:
